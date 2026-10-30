@@ -1,0 +1,221 @@
+:root {
+  --paper: #ffffff;
+  --brown: #4a2f1c;
+  --brown-soft: #7a5a43;
+  --line: #e7dccf;
+  --tint: #faf5ee;
+  --accent: #8b5a2b;
+  --accent-dark: #6f4520;
+  --error: #b3261e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  color: var(--brown);
+  font-family: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+  line-height: 1.7;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 24px;
+  border-bottom: 2px solid var(--line);
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  direction: ltr;
+}
+
+.tag {
+  font-size: 0.9rem;
+  color: var(--brown-soft);
+}
+
+.wrap {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 36px 20px 24px;
+}
+
+.hero { text-align: center; margin-bottom: 28px; }
+
+.quote {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.sub {
+  margin-top: 6px;
+  color: var(--brown-soft);
+  font-size: 1rem;
+}
+
+.box {
+  background: var(--tint);
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.row { display: flex; gap: 8px; }
+
+input {
+  flex: 1;
+  min-width: 0;
+  min-height: 52px;
+  padding: 0 14px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  color: var(--brown);
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  outline: none;
+  direction: ltr;
+  text-align: left;
+}
+
+input:focus { border-color: var(--accent); }
+input::placeholder { color: #b9a591; }
+
+button {
+  min-height: 52px;
+  padding: 0 22px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.main {
+  color: #fff;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+}
+.main:hover, .main:active { background: var(--accent-dark); border-color: var(--accent-dark); }
+
+.ghost {
+  color: var(--brown);
+  background: var(--paper);
+  border: 2px solid var(--line);
+}
+.ghost:hover, .ghost:active { border-color: var(--accent); }
+
+.error {
+  min-height: 1.5em;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--error);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 26px 0;
+}
+
+.step {
+  text-align: center;
+  padding: 14px 8px;
+  border: 2px dashed var(--line);
+  border-radius: 14px;
+}
+
+.num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+  font-weight: 800;
+  color: #fff;
+  background: var(--brown);
+  border-radius: 50%;
+}
+
+.step p { font-size: 0.92rem; }
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.quick, .recent { margin-bottom: 24px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.chip {
+  min-height: 44px;
+  padding: 0 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--brown);
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  direction: ltr;
+}
+.chip:hover, .chip:active { border-color: var(--accent); background: var(--tint); }
+
+.link {
+  margin-top: 10px;
+  min-height: 36px;
+  padding: 0;
+  font-size: 0.9rem;
+  color: var(--brown-soft);
+  background: none;
+  border: none;
+  text-decoration: underline;
+}
+
+.disclaimer {
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  color: var(--brown-soft);
+  background: var(--tint);
+  border-right: 4px solid var(--accent);
+  border-radius: 8px;
+}
+
+.foot {
+  padding: 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--brown-soft);
+  border-top: 2px solid var(--line);
+}
+
+@media (max-width: 520px) {
+  .tag { display: none; }
+  .row { flex-wrap: wrap; }
+  input { flex: 1 1 100%; }
+  .row button { flex: 1; }
+  .steps { grid-template-columns: 1fr; }
+}

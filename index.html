@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MAROHACK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top">
+    <span class="brand">MAROHACK</span>
+    <span class="tag">بوابتك السريعة للمواقع</span>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="quote" id="quote"></p>
+      <p class="sub">حط الرابط واتفضل ادخل علطول</p>
+    </section>
+
+    <section class="box">
+      <label for="url" class="label">الرابط بتاعك</label>
+      <div class="row">
+        <input id="url" type="text" inputmode="url" placeholder="مثال: wikipedia.org" autocomplete="off" autocapitalize="off" spellcheck="false">
+        <button id="paste" class="ghost" type="button">لصق</button>
+        <button id="go" class="main" type="button">ادخل</button>
+      </div>
+      <p class="error" id="error" role="alert"></p>
+    </section>
+
+    <section class="steps">
+      <div class="step"><span class="num">1</span><p>انسخ رابط الموقع</p></div>
+      <div class="step"><span class="num">2</span><p>الصقه في الخانة</p></div>
+      <div class="step"><span class="num">3</span><p>دوس ادخل وخلاص</p></div>
+    </section>
+
+    <section class="quick">
+      <h2>مواقع سريعة</h2>
+      <div class="chips" id="chips"></div>
+    </section>
+
+    <section class="recent" id="recentBox" hidden>
+      <h2>آخر اللي دخلتي عليه</h2>
+      <div class="chips" id="recent"></div>
+      <button id="clear" class="link" type="button">مسح السجل</button>
+    </section>
+
+    <p class="disclaimer">
+      تنبيه: صاحب الموقع مش مسؤول عن أي استخدام غلط للموقع ده أو للمواقع اللي بتدخل عليها.
+      كل واحد مسؤول عن اللي بيعمله، فاستخدمه في الخير بس.
+    </p>
+  </main>
+
+  <footer class="foot">MAROHACK &copy; <span id="year"></span></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
